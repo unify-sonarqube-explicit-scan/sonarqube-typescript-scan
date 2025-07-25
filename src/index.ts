@@ -1,30 +1,30 @@
-// 1. Non-strict equality (== vs ===)
+import app from './auth';
+
+// Existing code snippets below...
+
 function checkEqual(a: any, b: any): string {
-  if (a == b) { // Noncompliant: using non-strict equality '=='
+  if (a == b) { // Noncompliant
     return "Equal";
   } else {
     return "Not equal";
   }
 }
-console.log(checkEqual(0, false)); // Output: "Equal"
+console.log(checkEqual(0, false));
 
-// 2. Lexicographic array sort
 const numbers: number[] = [10, 2, 30, 1, 5];
-numbers.sort(); // Noncompliant: lexicographic sort
-console.log(numbers); // Output: [1, 10, 2, 30, 5]
+numbers.sort(); // Noncompliant
+console.log(numbers);
 
-// 3. Useless 'await'
 async function foo(): Promise<void> {
-  // Simulate async task
+  // Simulate async
 }
 async function bar(): Promise<void> {
   return await foo(); // Noncompliant
 }
 
-// 4. Use of continue (noncompliant in some linters/style guides)
 for (let i = 0; i < 10; i++) {
   if (i == 5) {
-    continue;  // Noncompliant
+    continue; // Noncompliant
   }
   alert("i = " + i);
 }
