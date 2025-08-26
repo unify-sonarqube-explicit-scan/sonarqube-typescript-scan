@@ -22,7 +22,7 @@ jobs:
       - name: checkout Source Code
         uses: cloudbees-io/checkout@v1
 
-      - name: Setup sonarqube explicit scanner with community edition
+      - name: Setup sonarqube explicit scanner
         uses: cloudbees-io/sonarqube-plugin@v1
         with:
           url: 'https://sonarqube.saas-preprod.beescloud.com'
