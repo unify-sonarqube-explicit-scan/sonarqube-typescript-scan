@@ -1,5 +1,5 @@
 name: sonarqube-hybrid-plugin-typescript
-kind: workflow
+kind: workflow 
 apiVersion: automation.cloudbees.io/v1alpha1
 
 on:
